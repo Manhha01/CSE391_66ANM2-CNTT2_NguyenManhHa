@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HR Management</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(120deg, #eef2f7, #dbeafe);
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #111827;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .left {
+           display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        header h1 {
+            font-size: 22px;
+            margin: 0;
+        }
+    
+
+        header nav a {
+            color: #9ca3af;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        header input {
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: none;
+        }
+
+        /* ===== MAIN ===== */
+        .container {
+            padding: 30px;
+        }
+
+        .title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .title-bar h2 {
+            margin: 0;
+        }
+
+        .btn-add {
+            background: #2563eb;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* ===== TABLE ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        th, td {
+            padding: 14px;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f5f9;
+            font-weight: bold;
+        }
+
+        tr:not(:last-child) {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .btn-edit {
+            background: #facc15;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn-delete {
+            background: #ef4444;
+            border: none;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        /* ===== FORM ===== */
+        .form-box {
+            margin-top: 40px;
+            max-width: 700px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .form-header {
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .form-body {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-body label {
+            font-size: 14px;
+        }
+
+        .form-body input,
+        .form-body select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #cbd5f5;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .form-footer {
+            padding: 15px;
+            text-align: right;
+        }
+
+        .btn-save {
+            background: #22c55e;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .btn-cancel {
+            background: #9ca3af;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+        }select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 2px solid #2563eb;   /* viền xanh */
+    background-color: #eff6ff;   /* nền xanh nhạt */
+    color: #1e3a8a;
+    font-weight: 500;
+}
+
+/* Khi focus (click vào) */
+select:focus {
+    outline: none;
+    border-color: #1d4ed8;
+    background-color: #dbeafe;
+}
+select option {
+    background: white;
+    color: #1e293b;
+}
+
+select option:checked {
+    background-color: #2563eb;
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="left">
+        <h1>HR Management</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+    <input type="text" placeholder="Search...">
+</header>
+
+<div class="container">
+
+    <div class="title-bar">
+        <h2>Employee</h2>
+        <button class="btn-add">+ Add</button>
+    </div>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Position</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Fatima Beatriz</td>
+            <td>Fatima Beatriz@gmail.com</td>
+            <td>0985674321</td>
+            <td>Staff</td>
+            <td>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delete">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Gabriel Hanna</td>
+            <td>Gabriel Hanna@gmail.com</td>
+            <td>0353674231</td>
+            <td>Staff</td>
+            <td>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delete">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Charles Diya</td>
+            <td>Charles Diya@gmail.com</td>
+            <td>03476588333</td>
+            <td>Staff</td>
+            <td>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delete">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Frank Lamdo</td>
+            <td>Frank Lamdo@gmail.com</td>
+            <td>0975444768</td>
+            <td>Manager</td>
+            <td>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delete">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Louis Tom</td>
+            <td>Louis Tom@gmail.com</td>
+            <td>0789568223</td>
+            <td>Staff</td>
+            <td>
+                <button class="btn-edit">Edit</button>
+                <button class="btn-delete">Delete</button>
+            </td>
+        </tr>
+    </table>
+
+    <div class="form-box">
+        <div class="form-header">New Employee</div>
+        <div class="form-body">
+            <div>
+                <label>Name</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email">
+            </div>
+            <div>
+                <label>Phone</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Position</label>
+                <select>
+                    <option>-- Select Position --</option>
+                    <option>Staff</option>
+                    <option>Manager</option>
+                    <option>CEO</option>
+                </select>
+            </div>
+            <div>
+                <label>Sex</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="sex"> Male</label>
+                    <label><input type="radio" name="sex"> Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-footer">
+            <button class="btn-save">Save</button>
+            <button class="btn-cancel">Cancel</button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
