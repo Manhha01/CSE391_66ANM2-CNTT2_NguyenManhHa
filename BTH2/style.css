@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #2b0830;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: absolute;
+  width: 100%;
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-logo a {
+  font-family: "Oleo Script", cursive;
+  font-size: 28px;
+  color: #f7e58a;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f7e58a;
+  font-weight: 500;
+}
+
+/* ===== HERO ===== */
+#hero {
+  height: 65vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-content {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 40px 70px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#hero-content h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+#hero-content p {
+  color: white;
+  margin-bottom: 20px;
+}
+
+#hero-content a {
+  text-decoration: none;
+  background-color: #f7e58a;
+  color: black;
+  padding: 10px 22px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* ===== HIGHLIGHTS ===== */
+#highlights {
+  background-color: #b7d8d8;
+  padding: 30px 50px;
+  text-align: center;
+}
+
+#highlights h2 {
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+#destinations {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.destination {
+  width: 300px;
+}
+
+.destination img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.destination p {
+  margin-top: 10px;
+}
+
+.destination strong {
+  color: #008b8b;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #1a0320;
+  padding: 15px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+footer img {
+  width: 40px;
+}
